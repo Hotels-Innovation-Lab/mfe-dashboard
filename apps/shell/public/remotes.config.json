@@ -1,0 +1,23 @@
+[
+  {
+    "name": "overview",
+    "entry": "http://localhost:3001/mf-manifest.json",
+    "label": "Overview",
+    "path": "/overview",
+    "icon": "layout-dashboard"
+  },
+  {
+    "name": "analytics",
+    "entry": "http://localhost:3002/mf-manifest.json",
+    "label": "Analytics",
+    "path": "/analytics",
+    "icon": "chart-line"
+  },
+  {
+    "name": "settings",
+    "entry": "http://localhost:3003/mf-manifest.json",
+    "label": "Settings",
+    "path": "/settings",
+    "icon": "settings"
+  }
+]

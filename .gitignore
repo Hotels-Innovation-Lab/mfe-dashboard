@@ -1,0 +1,11 @@
+node_modules
+dist
+coverage
+.turbo
+.env*.local
+*.log
+.DS_Store
+@mf-types
+.mf
+*.claude
+*.github

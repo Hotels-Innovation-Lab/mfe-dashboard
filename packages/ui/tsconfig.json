@@ -1,0 +1,9 @@
+{
+  "extends": "@mfe/config/tsconfig/react.json",
+  "compilerOptions": {
+    "paths": {
+      "@mfe/ui/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}

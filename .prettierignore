@@ -1,0 +1,8 @@
+dist
+coverage
+.turbo
+pnpm-lock.yaml
+@mf-types
+# shadcn-generated; keep identical to upstream
+packages/ui/src/components
+packages/ui/src/hooks

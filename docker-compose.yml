@@ -1,0 +1,28 @@
+# Production-like local run of every MFE:  docker compose up --build
+# Open http://localhost:3000. Each app is an independent image/container.
+x-app: &app
+  restart: unless-stopped
+
+services:
+  shell:
+    <<: *app
+    build: { context: ., args: { APP: shell } }
+    ports: ['3000:80']
+    # Point the shell at other remote URLs without rebuilding:
+    # volumes:
+    #   - ./docker/remotes.config.json:/usr/share/nginx/html/remotes.config.json:ro
+
+  overview:
+    <<: *app
+    build: { context: ., args: { APP: overview } }
+    ports: ['3001:80']
+
+  analytics:
+    <<: *app
+    build: { context: ., args: { APP: analytics } }
+    ports: ['3002:80']
+
+  settings:
+    <<: *app
+    build: { context: ., args: { APP: settings } }
+    ports: ['3003:80']

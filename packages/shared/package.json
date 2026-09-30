@@ -1,0 +1,40 @@
+{
+  "name": "@mfe/shared",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./host": "./src/host/index.tsx"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@mfe/ui": "workspace:*",
+    "react": "^19",
+    "react-router": "^8",
+    "sonner": "^2",
+    "zustand": "^5"
+  },
+  "devDependencies": {
+    "@mfe/config": "workspace:*",
+    "@mfe/ui": "workspace:*",
+    "@rsbuild/core": "^2.2.11",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
+    "eslint": "^9.39.5",
+    "jsdom": "^30.1.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router": "^8.4.0",
+    "sonner": "^2.0.8",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.2",
+    "zustand": "^5.0.15"
+  }
+}

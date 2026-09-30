@@ -1,0 +1,10 @@
+/*
+ * Stylesheet for modules exposed to the shell.
+ * Emits theme vars + utilities only; preflight and :root theme values come from the shell,
+ * so a remote can never reset or restyle the host page.
+ */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+@import 'tw-animate-css';
+@import './tokens.css';

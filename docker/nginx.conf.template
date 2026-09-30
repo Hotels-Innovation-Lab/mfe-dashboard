@@ -1,0 +1,26 @@
+# Rendered by the nginx image's envsubst step (only ${CORS_ORIGIN} is substituted).
+server {
+    listen 80;
+    root /usr/share/nginx/html;
+
+    gzip on;
+    gzip_types text/css application/javascript application/json image/svg+xml;
+
+    # Federation manifest + runtime config: always revalidate so new deploys are picked up.
+    location ~ ^/(mf-manifest|mf-stats|remotes\.config)\.json$ {
+        add_header Cache-Control "no-cache" always;
+        add_header Access-Control-Allow-Origin "${CORS_ORIGIN}" always;
+    }
+
+    # Content-hashed assets (JS/CSS chunks, remote entry): cache forever.
+    location /static/ {
+        add_header Cache-Control "public, max-age=31536000, immutable" always;
+        add_header Access-Control-Allow-Origin "${CORS_ORIGIN}" always;
+    }
+
+    # SPA fallback for client-side routes.
+    location / {
+        add_header Cache-Control "no-cache" always;
+        try_files $uri /index.html;
+    }
+}

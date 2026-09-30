@@ -1,0 +1,5 @@
+/* Full stylesheet: shell + remotes running standalone. */
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import './tokens.css';
+@import './theme.css';
