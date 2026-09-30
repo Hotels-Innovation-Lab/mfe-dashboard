@@ -1,4 +1,4 @@
-# MGM Corp Dashboard — Boilerplate Plan
+# MFE Dashboard — Boilerplate Plan
 
 ## Context
 Goal: a production-shaped starter for a dashboard built as micro frontends, where each section can be developed, tested, and deployed on its own while sharing one design system and one app state.
@@ -12,7 +12,7 @@ Decisions made:
 
 ## Repository layout
 ```
-mgm-corp-dashboard/
+mfe-dashboard/
 ├── apps/
 │   ├── shell/        # host app, port 3000: layout, sidebar, routing, auth, loads remotes
 │   ├── overview/     # remote, port 3001: KPI cards + a "summary" widget

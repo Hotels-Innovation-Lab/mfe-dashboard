@@ -1,4 +1,4 @@
-# MGM Corp Dashboard
+# MFE Dashboard
 
 A micro-frontend dashboard boilerplate: a **React 19** shell that composes independently built and deployed
 remotes at runtime using **Module Federation 2.0** on **Rsbuild**, with a shared **shadcn/ui** design system
